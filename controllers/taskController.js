@@ -86,7 +86,7 @@ exports.deleteTask = async (req, res) => {
             return res.status(403).json({ message: 'Unauthorized' });
         }
 
-        await task.deleteOne(); // Use deleteOne() instead of remove()
+        await task.deleteOne(); 
         console.log("Task deleted successfully");
         res.json({ message: 'Task deleted' });
 
